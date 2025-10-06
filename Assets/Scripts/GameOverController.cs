@@ -8,6 +8,7 @@ public class GameOverController : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public GameObject gameOverPanel;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class GameOverController : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadNextScene(0);
+        SceneManager.LoadScene(0);
     }
 
     // Update is called once per frame
