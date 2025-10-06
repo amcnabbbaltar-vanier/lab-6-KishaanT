@@ -27,7 +27,13 @@ public class EnemyHealth : MonoBehaviour
     }
 
     void Die(){
-        Debug.Log("The Enemy has died. ");
+        if(GameManager.Instance != null)
+        {
+            GameManager.Instance.AddScore(1);
+            GameManager.Instance.LoadNextScene();
+            Debug.Log("The Enemy has died. ");
+        }
+        
     }
     // Update is called once per frame
     void Update()
